@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<link rel="stylesheet" tydive="text/css" href="/css/style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="cc score">Score : <%=score%> </div>
+		<div class="cc level">Level : <%=level%></div>
+		<div class="cc speed">Speed : </div>
+	</div>
+	<div class="group">
+	
+
+		 <div class="given-words" id="ggg"><%=word%></div>
+
+
+	</div>
+
+
+
+
+<form action="/correct/<%=pres%>/<%=next%>" method="POST" id="theFormID">
+	<div class="container">
+	<div class="first-line">
+	<div class="al" id="q">q</div>
+	<div class="al" id="w">w</div>
+	<div class="al" id="e">e</div>
+	<div class="al" id="r">r</div>
+	<div class="al" id="t">t</div>
+	<div class="al" id="y">y</div>
+	<div class="al" id="u">u</div>
+	<div class="al" id="i">i</div>
+	<div class="al" id="o">o</div>
+	<div class="al" id="p">p</div></div>
+	<div class="second-line">
+	<div class="al" id="a">a</div>
+	<div class="al" id="s">s</div>
+	<div class="al" id="d">d</div>
+	<div class="al" id="f">f</div>
+	<div class="al" id="g">g</div>
+	<div class="al" id="h">h</div>
+	<div class="al" id="j">j</div>
+	<div class="al" id="k">k</div>
+	<div class="al" id="l">l</div></div>
+	<div class="third-line">
+	<div class="al" id="z">z</div>
+	<div class="al" id="x">x</div>
+	<div class="al" id="c">c</div>
+	<div class="al" id="v">v</div>
+	<div class="al" id="b">b</div>
+	<div class="al" id="n">n</div>
+	<div class="al" id="m">m</div>
+	</div>
+	</div>
+	
+
+
+	<input class="input" onkeyup="get(this.value)" name="value" id="theFieldID" autofocus>
+</form>
+	<script type ="text/javascript">
+		
+		function start_game(data){
+			alert(data)
+			
+		}
+
+	
+
+		function get(text){
+			
+			var len=text.length
+			
+			var tt=text.slice(len-1,len)
+			console.log(tt)
+			document.getElementById(tt).style.backgroundColor="#e68a00";
+			
+		setTimeout(function(){
+			document.getElementById(tt).style.backgroundColor="#c3c388";
+		},200)
+		}
+
+	</script>
+</body>
+</html>
